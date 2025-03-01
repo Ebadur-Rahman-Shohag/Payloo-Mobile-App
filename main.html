@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- daisy ui with tailwind -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <header class="border-b-2">
+      <nav class="flex justify-between items-center p-4">
+        <img src="./assets/Group.png" alt="logo image" />
+        <div>
+          <h2 class="text-2xl font-bold">$<span id="balance">45000</span></h2>
+          <p>Available Balance</p>
+        </div>
+        <button class="btn">Log Out</button>
+      </nav>
+    </header>
+    <main>
+      <!-- cards section -->
+      <section class="p-4">
+        <h1 class="mt-8 text-2xl font-bold">🔥<span> Welcome to Payooo!</span></h1>
+        <p class="mt-4 text-gray-500">
+          Enjoy easy and convenient financial services with us. Cashout charge
+          is low and
+        </p>
+        <!-- cards container -->
+        <div class="grid grid-cols-3 gap-4 mt-4">
+          <!-- card -->
+          <div id="add-money-card" class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Add Money</p>
+          </div>
+          <!-- card -->
+          <div id="cashout-card" class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Cashout</p>
+          </div>
+          <!-- card -->
+          <div class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Transfer</p>
+          </div>
+          <!-- card -->
+          <div class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Get Bonus</p>
+          </div>
+          <!-- card -->
+          <div class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Pay Bill</p>
+          </div>
+          <!-- card -->
+          <div id="transaction-card" class="border-2 p-6 flex flex-col items-center justify-center cursor-pointer">
+            <img src="./assets/wallet1.png" alt="logo" />
+            <p>Transactions</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- add-money section -->
+       <section id="add-money" class="p-4">
+        <h2 class="px-12">Add Money</h2>
+        <!-- form container -->
+      <div class=" w-full flex justify-center">
+        <div class="w-full hero-content flex-col lg:flex-row-reverse">
+          <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black">Select A Bank</label>
+                <select class="select ">
+                    <option value="Bkash">Bkash</option>
+                    <option value="Nagad">Nagad</option>
+                    <option class="DBBL">DBBL</option>
+                  </select>
+                <label class="fieldset-label text-black">Bank Account Number</label>
+                <input type="number" id="account-number" class="input" placeholder="Enter 11 digit number" />
+                <label class="fieldset-label text-black">Amount to Add</label>
+                <input id="amount" type="number" class="input" placeholder="Enter amount to withdraw" />
+                <label class="fieldset-label text-black">Pin Number</label>
+                <input id="pin-number" type="text" class="input" placeholder="Enter 4 digit pin number" />
+                <button id="addMoney-btn" class="btn bg-[#0874F2] text-white mt-4">Add Money</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+       </section>
+        <!-- cash-out section -->
+        <section id="cashout" class="p-4">
+            <h2 class="px-12">Cash Out</h2>
+            <!-- form container -->
+          <div class=" w-full flex justify-center">
+            <div class="w-full hero-content flex-col lg:flex-row-reverse">
+              <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                <form class="card-body">
+                  <fieldset class="fieldset">
+                    <label class="fieldset-label text-black">Agent Number</label>
+                    <input type="number" id="agent-number" class="input" placeholder="Enter 11 digit number" />
+                    <label class="fieldset-label text-black">Amount</label>
+                    <input id="cashout-amount" type="number" class="input" placeholder="Enter amount to withdraw" />
+                    <label class="fieldset-label text-black">Pin Number</label>
+                    <input id="cashout-pin-number" type="text" class="input" placeholder="Enter 4 digit pin number" />
+                    <button id="cashout-btn" class="btn bg-[#0874F2] text-white mt-4">Add Money</button>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+           </section>
+           <!-- Transactions -->
+            <section id="transaction" class="p-4">
+                <h2 class="text-center text-2xl font-bold">Transactions History</h2>
+                <ul id="transaction-container" class="mt-4 flex flex-col items-center justify-center space-y-4">
+                  
+                </ul>
+            </section>
+    </main>
+
+    <!-- js -->
+     <script src="./js/toggle.js"></script>
+     <script src="./js/addMoney.js"></script>
+    <script src="./js/cashout.js"></script>
+  </body>
+</html>

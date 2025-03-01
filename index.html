@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo</title>
     <!-- css -->
-     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,30 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
-    <h1 class="text-5xl text-red-400">Hello to Payloo</h1>
+    
+    <main class="max-w-md">
+        <!-- logo container -->
+      <div class="  flex flex-col items-center justify-center  relative">
+        <img class="mt-40" src="./assets/bg.png" alt="logo" />
+        <img class="absolute " src="./assets/Group.png" alt="logo" />
+      </div>
+      <!-- form container -->
+      <div class="-mt-40 w-full flex justify-center">
+        <div class="w-full hero-content flex-col lg:flex-row-reverse">
+          <div class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+            <form class="card-body">
+              <fieldset class="fieldset">
+                <label class="fieldset-label text-black">Mobile Number</label>
+                <input value="01234567890" type="number" id="mobile-number" class="input" placeholder="Enter your number" />
+                <label class="fieldset-label text-black">4 Digit Pin</label>
+                <input value="1234" type="text" id="pin-number" class="input" placeholder="Enter 4 Digit Pin" />
+                <button id="login-btn" class="btn bg-[#0874F2] text-white mt-4">Login</button>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
 
     <script src="./js/script.js"></script>
   </body>
